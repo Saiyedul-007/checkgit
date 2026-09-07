@@ -14,9 +14,20 @@
 # else:
 #     print(f"The number {input_number} is zero.")
 
-# WAP to check and display that the number is even or odd
-number = int(input("Enter the number: "))
-if number % 2 == 0:
-    print(f"The number {number} is even.")
-else: 
-    print(f"The number {number} is odd.")
+# # WAP to check and display that the number is even or odd
+# number = int(input("Enter the number: "))
+# if number % 2 == 0:
+#     print(f"The number {number} is even.")
+# else: 
+#     print(f"The number {number} is odd.")
+
+# WAP to show the grades of the student
+mark = int(input("Enter the marks of the student: " ))
+if mark >= 90 and mark <= 100:
+    print("A grade")
+elif mark >= 80:
+    print("B grade")
+elif mark >= 60:
+    print("C grade")
+else:
+    print("Failed")
