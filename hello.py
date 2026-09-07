@@ -1,1 +1,6 @@
-print("hello world")
+marks = int(input("Enter the marks of the student: "))
+attendance = int(input("Enter the attendance of the student: "))
+if marks >= 40 and attendance >= 75:
+    print("The student has passed the exam.")
+else:
+    print("The student has failed.")
