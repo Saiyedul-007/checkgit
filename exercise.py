@@ -95,3 +95,108 @@
 # hour, remainin_minute = divmod(total_minute, 60)
 
 # print(f"{hour} hours, {remainin_minute} minutes, {remaining_second} seconds.")
+
+# # WAP to read a number and check whether its even or odd
+# number = int(input("Enter a number: "))
+# if number % 2 == 0:
+#     print(f"The number {number} is even")
+# else:
+#     print(f"The number {number} is odd.")
+
+# # WAP to read three numbers and find the largest among them
+# num1 = float(input("Enter the first number: "))
+# num2 = float(input("Enter the second number: "))
+# num3 = float(input("Enter the third number: "))
+
+# if num1 > num2:
+#     if num1 > num3:
+#         print(f"In between {num1}, {num2} and {num3}, the first number {num1} is the greatest.")
+#     else:
+#         print(f"In between {num1}, {num2} and {num3}, the third number {num3} is the greatest.")
+# else:
+#     if num2 > num3:
+#         print(f"In between {num1}, {num2} and {num3}, the second number {num2} is the greatest.")
+#     else:
+#         print(f"In between {num1}, {num2} and {num3}, the third number {num3} is the greatest.")
+
+# # A better way (with conditionals)
+# num1 = float(input("Enter the first number: "))
+# num2 = float(input("Enter the second number: "))
+# num3 = float(input("Enter the third number: "))
+
+# # Check whether first number is the largest of the three
+# if num1 > num2 and num1 > num3:
+#     print(f"The first number {num1} is the largest.")
+# # Check whether the second number is the largest of the three
+# elif num2 > num1 and num2 > num3:
+#     print(f"The second number {num2} is the largest.")
+# # If both num1 and num2 are not the largest then only one choice remain
+# else:
+#     print(f"The third number {num3} is the largest.")
+
+# ## The best way is to use max() function
+# greatest = max(num1, num2, num3)
+# print(f"The greatest number is {greatest}")
+
+# #WAP to read three numbers and find the smallest among them
+# num1 = float(input("Enter the first number: "))
+# num2 = float(input("Enter the second number: "))
+# num3 = float(input("Enter the third number: "))
+# # Check whether num1 is the smallest
+# if num1 <= num3 and num1 <= num2:
+#     print(f"The first number {num1} is the smallest.")
+# elif num2 <= num3 and num2 <= num1:
+#     print(f"The second number {num2} is the smallest.")
+# else:
+#     print(f"The third number {num3} is the smallest.")
+
+# # WAP to read a year and check whether it is a leap year or not.
+# year = int(input("Enter a year: "))
+# # Check whether the year is divisible by 4
+# if year % 4 ==0:
+#     if year % 100 == 0:
+#         if year % 400 == 0:
+#             print(f"The year {year} is a leap year.")
+#         else:
+#             print(f"The year {year} is not a leap year.")
+#     else:
+#         print(f"The year {year} is not a leap year.")
+
+# else:
+#     print(f"The year {year} is not a leap year")
+
+# WAP to read a character and check whether it is a vowel or a consonant
+character = input("Enter a character: ").lower()
+# Check only for vowel cases
+match character:
+    case "a":
+        print(f"The character is a vowel.")
+    case "e":
+        print(f"The character is a vowel.")
+    case "i":
+        print("The character is a vowel.")
+    case "o":
+        print("The character is a vowel.")
+    case "u":
+        print("The character is a vowel.")
+    case _:
+        print("The character is a consonant.")
+
+# A better way:
+if character.isalpha() and len(character) == 1:
+    match character:
+        case "a"| "e"|"i"|"o"|"u":
+            print("The character is a vowel")
+        case _:
+            print("The character is a consonant.")
+else:
+    print("Invalid input. Please enter only one character.")
+
+# The best way:
+if character.isalpha() and len(character) == 1:
+    if character in "aeiou":
+        print("The character is a vowel.")
+    else:
+        print("The character is a consonant")
+else:
+    print("Invalid input. Please enter a single letter.")
