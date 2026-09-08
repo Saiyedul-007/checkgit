@@ -81,3 +81,17 @@
 # print("*"*30)
 # print(f"{'Total'.ljust(20)} {total_marks: .1f}")
 # print(f"{'Average'.ljust(20)} {average: .1f}")
+
+# # WAP to read seconds and convert them into hours, minutes and seconds
+# second= int(input("Enter the amount of time in seconds: "))
+# # minute = second // 60 # Convert the seconds into minute (total)
+# # remaining_second = second % 60 # Calculate the seconds that remain after all conversions
+# # hour = minute // 60 # Convert the total minutes into hours (total)
+# # remaining_minute = minute % 60 # Calculate the minutes that remain after all conversions
+# # print(f"For {second} in total: {hour} hour, {remaining_minute} minutes and {remaining_second} seconds passed")
+
+# # A better way to do this
+# total_minute, remaining_second = divmod(second, 60)
+# hour, remainin_minute = divmod(total_minute, 60)
+
+# print(f"{hour} hours, {remainin_minute} minutes, {remaining_second} seconds.")
