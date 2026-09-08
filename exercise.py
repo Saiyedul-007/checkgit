@@ -38,4 +38,46 @@
 # print(f"Area of the rectangle is: {length * breadth: .2f}")
 # print(f"The perimeter of the rectangle: {2 * (length + breadth): .2f}")
 
-# WAP to swap two numbers using a third variable
+# # WAP to swap two numbers using a third variable
+# a = 6
+# b = 7
+# c = a
+# a = b
+# b = c
+# print(a,b)
+
+# WAP to swap two numbers without using a third variable
+# Take two numbers as input
+# num1 = int(input("Enter the first number: "))
+# num2 = int(input("Enter the second number: "))
+# print(f"Before swapping: First = {num1}, Second = {num2}")
+
+# # Swap without a third variable
+# num1, num2 = num2, num1
+
+# # Print the results
+# print(f"After swapping: First = {num1}, Second = {num2}")
+
+# WAP to read a temperature in Celsius and convert it to Fahrenheit
+# celsius = float(input("Enter temperature in celsius: "))
+# fahrenheit = celsius * (9/5) + 32
+# print(f"The temperature {celsius} degree celsius is {fahrenheit: .2f} degree in Fahrenheit scale.")
+
+# # WAP to read the marks of 5 subjects and print the total and average
+# math = float(input("Enter the marks in Mathematics: "))
+# biology = float(input("Enter the marks in Biology: "))
+# english = float(input("Enter the marks in English: "))
+# physics = float(input("Enter the marks in Physics: "))
+# chemistry = float(input("Enter the marks in Chemistry: "))
+# total_marks = math+biology+chemistry+physics+english
+# average = total_marks / 5
+# print("\n")
+# print("STUDENT REPORT CARD".center(30,"-"))
+# print(f"{'Mathematics'.ljust(20)} {math: .1f}")
+# print(f"{'Biology'.ljust(20)} {biology: .1f}")
+# print(f"{'English'.ljust(20)} {english: .1f}")
+# print(f"{'Physics'.ljust(20)} {physics: .1f}")
+# print(f"{'Chemistry'.ljust(20)} {chemistry: .1f}")
+# print("*"*30)
+# print(f"{'Total'.ljust(20)} {total_marks: .1f}")
+# print(f"{'Average'.ljust(20)} {average: .1f}")
