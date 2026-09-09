@@ -165,38 +165,110 @@
 # else:
 #     print(f"The year {year} is not a leap year")
 
-# WAP to read a character and check whether it is a vowel or a consonant
-character = input("Enter a character: ").lower()
-# Check only for vowel cases
-match character:
-    case "a":
-        print(f"The character is a vowel.")
-    case "e":
-        print(f"The character is a vowel.")
-    case "i":
-        print("The character is a vowel.")
-    case "o":
-        print("The character is a vowel.")
-    case "u":
-        print("The character is a vowel.")
-    case _:
-        print("The character is a consonant.")
+# # WAP to read a character and check whether it is a vowel or a consonant
+# character = input("Enter a character: ").lower()
+# # Check only for vowel cases
+# match character:
+#     case "a":
+#         print(f"The character is a vowel.")
+#     case "e":
+#         print(f"The character is a vowel.")
+#     case "i":
+#         print("The character is a vowel.")
+#     case "o":
+#         print("The character is a vowel.")
+#     case "u":
+#         print("The character is a vowel.")
+#     case _:
+#         print("The character is a consonant.")
 
-# A better way:
-if character.isalpha() and len(character) == 1:
-    match character:
-        case "a"| "e"|"i"|"o"|"u":
-            print("The character is a vowel")
-        case _:
-            print("The character is a consonant.")
-else:
-    print("Invalid input. Please enter only one character.")
+# # A better way:
+# if character.isalpha() and len(character) == 1:
+#     match character:
+#         case "a"| "e"|"i"|"o"|"u":
+#             print("The character is a vowel")
+#         case _:
+#             print("The character is a consonant.")
+# else:
+#     print("Invalid input. Please enter only one character.")
 
-# The best way:
-if character.isalpha() and len(character) == 1:
-    if character in "aeiou":
-        print("The character is a vowel.")
-    else:
-        print("The character is a consonant")
-else:
-    print("Invalid input. Please enter a single letter.")
+# # The best way:
+# if character.isalpha() and len(character) == 1:
+#     if character in "aeiou":
+#         print("The character is a vowel.")
+#     else:
+#         print("The character is a consonant")
+# else:
+#     print("Invalid input. Please enter a single letter.")
+
+# # WAP to read a character and check whether it is an alphabet, digit or special symbol
+# character = input("Enter a character: ")
+# # Check whether the character is single letter or not
+# if len(character) == 1:
+#     # Check whether the character is digit or alphabet
+#     if character.isalnum():
+#         if character.isalpha(): # Checking for alphabet
+#             print(f"The character {character} is an alphabet.")
+#         else: # Checking for digits
+#             print(f"The character {character} is a digit.")
+#     else: # Since not an alphabet or a digit, it has to be a special symbol.
+#         print(f"The character {character} is a special symbol.")
+# # Since not a single character the value is invalid
+# else:
+#     print("Invalid value. Please enter only a single character.")
+
+# # A better way
+# if len(character) == 1:
+#     # Check whether the character is an alphabet
+#     if character.isalpha():
+#         print(f"The character {character} is an alphabet.")
+#     # Check whether the character is a digit
+#     elif character.isdigit():
+#         print(f"The character {character} is a digit.")
+#     else:
+#         print(f"The character {character} is a special symbol.")
+# else:
+#     print("Invalid input. Please enter only one character.")
+
+# # WAP to read the marks of a student and print the grade (A/B/C/D/Fail)
+# mark = int(input("Enter the mark of the student: "))
+# # check for the mark with the criteria given
+# if mark >= 0 and mark <= 100:
+#     if mark >= 90:
+#         print("Grade A")
+#     elif mark >= 80:
+#         print("Grade B")
+#     elif mark >= 60:
+#         print("Grade C")
+#     elif mark >= 40:
+#         print("Grade D")
+#     else:
+#         print("Failed")
+# else:
+#     print("Invalid input. Please put within 0 to 100")
+
+# # WAP to read a number and check whether it is divisible by both 3 and 5
+# number = int(input("Enter a number: "))
+# # Has to be divisible by both 3 and 5
+# if number % 3 == 0 and number % 5 == 0:
+#     print(f"The number {number} is divisible by both 3 and 5.")
+# else:
+#     print(f"The number {number} is not divisible by 3 or 5.")
+
+# # WAP to read the age of a person and check whether they are eligible to vote
+# age = input("Please enter your age: ")
+# # The age has to be in an acceptable range
+# if age.isdigit():
+#     age = int(age)
+#     if age >= 0 and age <= 100:
+#         # The user is eligible to vote if he/she is 18 or above
+#             if age >= 18:
+#                 print("The user is eligible to vote.")
+#             # The user is not yet eligible but very close to being eligible
+#             elif age >= 16:
+#                 print("The user is not yet eligible, please yet 1 or 2 years more.")
+#             else:
+#                 print("The user is not eligible to vote.")
+# # The user has input invalid input
+# else:
+#     print("The user has given an invalid input. Please only use numbers for your age.")
