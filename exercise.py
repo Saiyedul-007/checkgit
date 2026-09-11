@@ -272,3 +272,112 @@
 # # The user has input invalid input
 # else:
 #     print("The user has given an invalid input. Please only use numbers for your age.")
+
+# # WAP to display all the natural numbers from 1 to n. (n is user input)
+# number = int(input("Enter the number of natural numbers: "))
+# for numbers in range(1, number+1):
+#     print(numbers, end=" ")
+
+# # WAP to display all natural numbers from 1 to n in reverse order
+# number = int(input("Enter the number of natural numbers: "))
+# for numbers in range(number, 0, -1):
+#     print(numbers)
+
+# # WAP to display all even numbers from 1 to n
+# number = int(input("Enter the range of numbers: "))
+# for num in range(1, number + 1):
+#     if num % 2 != 0:
+#         continue
+#     print(num)
+
+# # WAP to display all odd numbers from 1 to n
+# number = int(input("Enter the range of numbers: "))
+# for num in range(1, number + 1):
+#     if num % 2 != 0:
+#         print(num)
+
+# # WAP to find the sum of all natural numbers, all even numbers and odd numbers from 1 to n
+# numbers = int(input("Enter the range of natural numbers: "))
+# natural_sum = 0
+# even_sum = 0
+# odd_sum = 0
+# for num in range(1, numbers + 1):
+#     natural_sum += num
+#     if num % 2 == 0:
+#         even_sum += num
+#     else:
+#         odd_sum += num
+# print(f"The sum of natural numbers in the range of {numbers} is {natural_sum}")
+# print(f"The sum of natural even numbers in the range of {numbers} is {even_sum}")
+# print(f"The sum of natural odd numbers in the range of {numbers} is {odd_sum}")
+
+# # WAP to find the product of all natural numbers from 1 to n(factorial of n)
+# factorial = int(input("Enter the number whose factorial is to be determined: "))
+# print(f"The factorials of the number {factorial} are: ", end=" ")
+# product = 1
+# for num in range(factorial, 0, -1):
+#     print(num, end=" ")
+#     product *= num
+# print(f"\nThe product of all natural numbers from 1 to factorial of {factorial}: {product}")
+
+# # WAP to display the multiplication table of a number n
+# number = int(input("Enter the number for its multiplication table: "))
+# for num in range(1, 11):
+#     print(f"{number} * {num} = {number * num}")
+
+# # WAP to display all multiples of a number m up to n terms
+# number = int(input("Enter a number to find its multiple: "))
+# multiple = int(input("Enter how many multiples to find: "))
+# print(f"The multiples of the number {number} for {multiple} terms are: ", end="")
+# for num in range(1, multiple + 1):
+#     if num == multiple:
+#         print(f"{number * num}")
+#     else:
+#         print(f"{number * num}", end=", ")
+
+# # WAP to count how many numbers from 1 to n are divisible by 3
+# terms = int(input("Enter the number of terms to check on: "))
+# counter = 0
+# counter2 = 0
+# divisible_str = ""
+# non_divisible_str = ""
+# for num in range(1, terms + 1):
+#     if num % 3 == 0:
+#         if counter == 0:
+#             divisible_str += str(num)
+#         else:
+#             divisible_str += f", {num}"
+#         counter += 1
+#     else:
+#         if counter2 == 0:
+#             non_divisible_str += str(num)
+#         else:
+#             non_divisible_str += f", {num}"
+#         counter2 += 1
+# print(f"\nThe numbers from 1 to {terms} that are divisible by 3: {divisible_str}")
+# print(f"The numbers from 1 to {terms} that are NOT divisible by 3: {non_divisible_str}")
+# print(f"\nThe number of terms that are divisible and not divisible by 3 respectively: {counter} and {counter2}")
+
+# WAp to display all numbers from 1 to n that are divisible by 3 or 5
+terms = int(input("Enter the number of terms: "))
+divisible_counter = 0
+non_divisible_counter = 0
+divisible_str = ""
+non_divisible_str = ""
+for num in range(1, terms+1):
+    if num % 3 == 0 or num % 5 == 0:
+        if divisible_counter == 0:
+            divisible_str += str(num)
+        else:
+            divisible_str += f", {num}"
+        divisible_counter += 1
+    else:
+        if non_divisible_counter == 0:
+            non_divisible_str += str(num)
+        else:
+            non_divisible_str += f", {num}"
+        non_divisible_counter += 1
+print(f"The number of terms that are divisible by 5 or 3: {divisible_counter}")
+print(f"The number of terms that are not divisible by 5 or 3: {non_divisible_counter}")
+print(f"The numbers from 1 to {terms} that are divisible by 3 or 5: {divisible_str}")
+print(f"The numbers from 1 to {terms} that are not divisible by 3 or 5: {non_divisible_str}")
