@@ -358,26 +358,244 @@
 # print(f"The numbers from 1 to {terms} that are NOT divisible by 3: {non_divisible_str}")
 # print(f"\nThe number of terms that are divisible and not divisible by 3 respectively: {counter} and {counter2}")
 
-# WAp to display all numbers from 1 to n that are divisible by 3 or 5
-terms = int(input("Enter the number of terms: "))
-divisible_counter = 0
-non_divisible_counter = 0
-divisible_str = ""
-non_divisible_str = ""
-for num in range(1, terms+1):
-    if num % 3 == 0 or num % 5 == 0:
-        if divisible_counter == 0:
-            divisible_str += str(num)
-        else:
-            divisible_str += f", {num}"
-        divisible_counter += 1
-    else:
-        if non_divisible_counter == 0:
-            non_divisible_str += str(num)
-        else:
-            non_divisible_str += f", {num}"
-        non_divisible_counter += 1
-print(f"The number of terms that are divisible by 5 or 3: {divisible_counter}")
-print(f"The number of terms that are not divisible by 5 or 3: {non_divisible_counter}")
-print(f"The numbers from 1 to {terms} that are divisible by 3 or 5: {divisible_str}")
-print(f"The numbers from 1 to {terms} that are not divisible by 3 or 5: {non_divisible_str}")
+# # WAp to display all numbers from 1 to n that are divisible by 3 or 5
+# terms = int(input("Enter the number of terms: "))
+# divisible_counter = 0
+# non_divisible_counter = 0
+# divisible_str = ""
+# divisible_str_3 = ""
+# divisible_str_5 = ""
+# non_divisible_str_3 = ""
+# non_divisible_str_5 = ""
+# non_divisible_str = ""
+# for num in range(1, terms+1):
+#     if num % 3 == 0 or num % 5 == 0:
+#         if divisible_counter == 0:
+#             divisible_str += str(num)
+#         else:
+#             divisible_str += f", {num}"
+#         divisible_counter += 1
+#     else:
+#         if non_divisible_counter == 0:
+#             non_divisible_str += str(num)
+#         else:
+#             non_divisible_str += f", {num}"
+#         non_divisible_counter += 1
+# print(f"The number of terms that are divisible by 5 or 3: {divisible_counter}")
+# print(f"The number of terms that are not divisible by 5 or 3: {non_divisible_counter}")
+# print(f"The numbers from 1 to {terms} that are divisible by 3 or 5: {divisible_str}")
+# print(f"The numbers from 1 to {terms} that are not divisible by 3 or 5: {non_divisible_str}")
+
+# # WAP to count the number of digits in a number n
+# original_entry = int(input("Enter the number to find its number of digits: "))
+# # Enter through a loop and keep going until the answer is 0
+# digit_counter = 0
+# entry = abs(original_entry)
+
+# if entry // 10 != 0:
+#     while entry > 0:
+#         entry //= 10
+#         digit_counter += 1
+#     print(f"The number {original_entry} is {digit_counter} numbered.")
+# else:
+#     print(f"The number {original_entry} is a single digit number.")
+
+# WAP to display all the digits of a number n (one per line)
+# original_entry = int(input("Enter the number: "))
+# entry = abs(original_entry)
+# number = ""
+# number_index = 0
+# if entry // 10 != 0:
+#     while entry > 0:
+#         temp = (entry % 10)
+#         number += str(temp)
+#         number_index += 1
+#         entry //= 10
+# else:
+#     print(entry)
+
+# for i in range(number_index, 0, -1):
+#     print(number[i-1])
+# A better way
+# original_entry =int(input("Enter the number: "))
+# entry = abs(original_entry) # TO exclude any negative numbers given by the user.
+
+# if entry // 10 == 0: # Get the single digit number cases covered
+#     print(entry)
+# else: # For all multi-digit numbers
+#     number = "" # Storing the digits to output later-on
+#     digit_index = 0
+#     while entry > 0:
+#         temp = entry % 10
+#         number = str(temp) + number
+#         digit_index += 1
+#         entry //= 10
+# # Printing the digits of the number in a single line
+# for digit in range(digit_index):
+#     print(number[digit])
+
+# # WAP to find the sum of all digits of a number n
+# original_entry = int(input("Enter a number: "))
+# entry = abs(original_entry)
+
+# # Check for single digit number
+# if entry // 10 == 0:
+#     print(f"Since {original_entry} is a single digit number, its sum of digit is: {entry}")
+
+# else: # For all the multi-digit numbers
+#     # break the numbers into single digits
+#     total = 0
+#     while entry > 0:
+#         temp = entry % 10
+#         total += temp
+#         entry //= 10
+#     print(f"The sum of all digits of the number {original_entry} is {total}")
+
+# A better way
+# original_entry = int(input("Enter a number: "))
+# entry = abs(original_entry)
+
+# # Covering the single digit number case
+# if entry // 10 == 0:
+#     print(f"The number {original_entry} is a single digit number and the sum of its digit is: {entry}")
+
+# # Covering the multi-digit number case
+# else:
+#     total_sum = 0 # The variable to store the sum of all digits of the number
+#     for digit in str(entry):
+#         total_sum += int(digit)
+#     print(f"The sum of all digits of the number {original_entry} is: {total_sum}")
+
+# # WAP to find the product of all digits of a number n
+# # Take input from the user
+# original_input = int(input("Enter a number: "))
+# # Make sure that the edge case of negative numbers is taken for
+# entry = abs(original_input)
+# # Cover the edge case of having a single digit number
+# if entry // 10 == 0:
+#     print(f"The number {original_input} is a single digit number and the product of its digit: {entry}")
+# # Cover the multi-digit cases
+# else:
+#     # Take the variable to store the product
+#     number_product = 1
+    # Take a while loop to get each digit
+    # while entry > 0:
+    #     # Take one digit from the number through modulo storing in a variable
+    #     temp_storage = entry % 10
+    #     # Multiply that digit with the product previously taken
+    #     number_product *= temp_storage
+    #     # Shave of a digit from the number through floor division
+    #     entry //= 10
+    # print(f"The product of all digits of the number {original_input}: {number_product}")
+    # for digit in str(entry):  # Turn the integer input into a string for iteration through the items
+    #     number_product *= int(digit) # Turn the string back into an integer for multiplication
+    # print(f"The product of all digits of the number {original_input}: {number_product}")
+
+# # WAP to reverse a number n
+# # Take input from the user
+# original_input = input("Enter an integer: ")
+# # Make sure to cover the edge cases of user input
+# # entry = abs(original_input)
+# while original_input.isdigit() == False:
+#     print("Invalid input. Please only enter a number")
+#     original_input = input("Enter a number: ")
+# # Create a loop that will give the number out
+# print(f"The reverse of the number {original_input}: ", end="")
+# for digit in range(len(original_input) - 1, -1, -1):
+#     print(original_input[digit], end="")
+
+# # Better way
+# original_entry = input("Enter a number: ")
+# while original_entry.replace("-","").isdigit() == False:
+#     print("Invalid input. Please enter a number.")
+#     original_entry = input("Enter a number: ")
+
+# if original_entry.startswith("-"):
+#     reverse_original_entry = "-" + original_entry[1:][::-1]
+#     print(reverse_original_entry)
+# else:
+#     reverse_original_entry = original_entry[::-1]
+#     print(reverse_original_entry)
+
+# # ALTERNATE WAY
+# # Take input from the user
+# original_entry = input("Enter a number: ")
+# # Make sure that the input given by the user is not invalid
+# while original_entry.replace("-", "").isdigit() == False:
+#     print("Invalid input. Please enter a number.")
+#     original_entry = input("Enter a number: ")
+# print(f"The reverse of the number {original_entry}: ", end="")
+# # Use case for negative number
+# if original_entry.startswith("-"):
+#     print("-", end="")
+#     for digit in range(len(original_entry) - 1, 0,-1):
+#         print(original_entry[digit], end="")
+# else:
+#     for digit in range(len(original_entry) -1, -1, -1):
+#         print(original_entry[digit], end="")
+
+# # WAP to find the largest digit in a number n
+# # Get input from the user
+# original_entry = input("Enter a number: ")
+# # Make sure that the input given is valid
+# while original_entry.replace("-","").isdigit() == False:
+#     print("Invalid input. Please enter an integer.")
+#     original_entry = input("Enter a number: ")
+# comparable_digit = 0
+# clean_entry = original_entry.replace("-","")
+# for digit in range(0, len(clean_entry)):
+#     temp = int(clean_entry[digit])
+#     if temp > comparable_digit:
+#         comparable_digit = temp
+# print(f"The largest digit of the number {original_entry} is {comparable_digit}")
+
+# # WAP to find the smallest digit in a number n
+# # Get the input from the user
+# original_entry = input("Enter an integer: ")
+# # Make sure the user input is not invalid
+# while original_entry.replace("-","").isdigit() == False:
+#     print("Invalid input.")
+#     original_entry = input("Enter an integer: ")
+# # Get a cleaned up input to cover the negative cases
+# clean_entry = original_entry.replace("-", "")
+# # Make a variable that will be compared to with the digit
+# comparable_digit = int(clean_entry[0])
+# # Get each digit from the number
+# for digit in clean_entry:
+#     # A variable that will take the digit from the number and store it
+#     temp = int(digit)
+#     if temp < comparable_digit:
+#         comparable_digit = temp
+# print(f"The smallest digit of the number {original_entry} is {comparable_digit}")
+
+# # WAP to count the number of even digits and odd digits in a number n
+# # Get user input
+# original_input = input("Enter a number: ")
+# # Make sure it invalid inputs are taken care of
+# while original_input.replace("-", "").isdigit() == False:
+#     print("Invalid Input.")
+#     original_input = input("Please enter an integer: ")
+
+# # Remove the negative sign from the number
+# if original_input.startswith("-"):
+#     clean_input = original_input.replace("-", "")
+# else:
+#     clean_input = original_input
+
+# # Make variables to store numbers of even and odd digits and their counts
+# even_counter = odd_counter = 0
+# even_list = []
+# odd_list = []
+
+# # Make a loop to go through each digit of the number
+# for digit in clean_input:
+#     temp = int(digit) # Assign a variable to store the integer digit of the number
+#     # Logic for checking the even and odd digits
+#     if temp % 2 == 0:
+#         even_list.append(temp)
+#         even_counter += 1
+#     else:
+#         odd_list.append(temp)
+#         odd_counter += 1
+# print(f"The number {original_input} has {even_counter} even digits and {odd_counter} odd digits.")
+# print(f"Even digits: {even_list}\nOdd digits: {odd_list}")
